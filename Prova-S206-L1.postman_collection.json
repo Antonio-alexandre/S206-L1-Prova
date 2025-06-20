@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "679a7b57-5757-4e9f-93be-5eb3474e1da3",
+		"name": "Prova-S206-L1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46044873"
+	},
+	"item": [
+		{
+			"name": "Puxar todos produtos da API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BaseURL}}products/",
+					"host": [
+						"{{BaseURL}}products"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ID inválido",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}products/99999",
+					"host": [
+						"{{BaseURL}}products"
+					],
+					"path": [
+						"99999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Antonio\",\r\n  \"lastName\": \"Silva\",\r\n  \"maidenName\": \"Josefino\",\r\n  \"age\": 71,\r\n  \"gender\": \"male\",\r\n  \"email\": \"antonio@blablabla.com\",\r\n  \"phone\": \"+55 11 9 9002-8922\",\r\n  \"username\": \"antonios\",\r\n  \"password\": \"abcdef123\",\r\n  \"birthDate\": \"1970-02-06\",\r\n  \"bloodGroup\": \"O-\",\r\n  \"height\": 180,\r\n  \"weight\": 70.0,\r\n  \"eyeColor\": \"brown\",\r\n  \"hair\": {\r\n    \"color\": \"brown\",\r\n    \"type\": \"curly\"\r\n  },\r\n  \"address\": {\r\n    \"address\": \"Rua 02, 123\",\r\n    \"city\": \"São Paulo\",\r\n    \"state\": \"SP\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}users/add",
+					"host": [
+						"{{BaseURL}}users"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificando usuário",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Antonio\",\r\n  \"lastName\": \"Silva\",\r\n  \"maidenName\": \"Josefino\",\r\n  \"age\": 71,\r\n  \"gender\": \"male\",\r\n  \"email\": \"antonio@blablabla.com\",\r\n  \"phone\": \"+55 11 9 9002-8922\",\r\n  \"username\": \"antonios\",\r\n  \"password\": \"abcdef123\",\r\n  \"birthDate\": \"1970-02-06\",\r\n  \"bloodGroup\": \"O-\",\r\n  \"height\": 180,\r\n  \"weight\": 70.0,\r\n  \"eyeColor\": \"brown\",\r\n  \"hair\": {\r\n    \"color\": \"brown\",\r\n    \"type\": \"curly\"\r\n  },\r\n  \"address\": {\r\n    \"address\": \"Rua 02, 123\",\r\n    \"city\": \"São Paulo\",\r\n    \"state\": \"SP\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}users/",
+					"host": [
+						"{{BaseURL}}users"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
